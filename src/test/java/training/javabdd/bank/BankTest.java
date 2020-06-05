@@ -1,6 +1,10 @@
 package training.javabdd.bank;
 
 import org.junit.jupiter.api.Test;
+import training.javabdd.bank.customer.Customer;
+import training.javabdd.bank.offer.credit.BusinessCreditOffer;
+import training.javabdd.bank.offer.credit.CreditOffer;
+import training.javabdd.bank.offer.credit.EconomyCreditOffer;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +12,7 @@ public class BankTest {
 
     @Test
     public void testEconomyCreditOfferUsualCustomer() {
-        CreditOffer economyCreditOffer = new CreditOffer("1", "Economy");
+        CreditOffer economyCreditOffer = new EconomyCreditOffer("1");
         Customer mike = new Customer("Mike", false);
 
         assertEquals("1", economyCreditOffer.getId());
@@ -22,7 +26,7 @@ public class BankTest {
 
     @Test
     public void testEconomyCreditOfferVipCustomer() {
-        CreditOffer economyCreditOffer = new CreditOffer("1", "Economy");
+        CreditOffer economyCreditOffer = new EconomyCreditOffer("1");
         Customer john = new Customer("John", true);
 
         assertEquals("1", economyCreditOffer.getId());
@@ -36,7 +40,7 @@ public class BankTest {
 
     @Test
     public void testBusinessCreditOfferUsualCustomer() {
-        CreditOffer businessCreditOffer = new CreditOffer("2", "Business");
+        CreditOffer businessCreditOffer = new BusinessCreditOffer("2");
 
         Customer mike = new Customer("Mike", false);
 
@@ -49,7 +53,7 @@ public class BankTest {
 
     @Test
     public void testBusinessCreditOfferVipCustomer() {
-        CreditOffer businessCreditOffer = new CreditOffer("2", "Business");
+        CreditOffer businessCreditOffer = new BusinessCreditOffer("2");
 
         Customer john = new Customer("John", true);
 

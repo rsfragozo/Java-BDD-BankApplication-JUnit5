@@ -1,4 +1,4 @@
-package training.javabdd.bank;
+package training.javabdd.bank.customer;
 
 public class Customer {
 
