@@ -45,7 +45,7 @@ public class CreditOffer {
 	public boolean removeCustomer(Customer customer) {
 		switch (creditOfferType) {
 			case "Economy":
-				if (customer.isVip()) {
+				if (!customer.isVip()) {
 					return customersList.remove(customer);
 				}
 				return false;
